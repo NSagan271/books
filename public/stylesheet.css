@@ -1,0 +1,205 @@
+body{
+    font-family: 'Lato', sans-serif;
+    padding:0px;
+}
+h1,h3,p{
+    font-family: sans-serif;
+    width:100%;
+    text-align: center;
+}
+p{
+    font-size: 25px;
+    font-weight:bold;
+}
+.title{
+    font-variant: small-caps
+}
+.bookimg{
+    display: inline-block;
+    text-align:center;
+    min-height: 40%;
+    max-height:50%;
+    max-width: 100%;
+    border-radius: 10px;
+    padding:10px;
+    border: 15px solid #4424D6;
+    cursor:pointer;
+    
+}
+.img{
+    display: inline-block;
+}
+.text{
+    display: inline-block;
+}
+.book, .books{
+    padding:20px 0px;
+    margin-top: 10px;
+    text-align: center;
+    overflow:hidden;
+    border: 15px solid #347B98;
+    border-radius:20px;
+    background-color:#D4EDF7;
+}
+.book{
+    visibility:hidden;
+}
+.storedBook{
+    margin:5px;
+    padding: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display:inline-block;
+    vertical-align: top;
+    max-width: 300px;
+    background-color:white;
+}
+.status{
+    width:100%;
+    padding-top: 10px;
+    margin:0px;
+    padding-bottom: 10px;
+    margin-bottom:10px;
+    vertical-align: bottom;
+    color:white;
+    background-color:#347B98;
+}
+.container{
+    width:100%;
+    height:100px;
+    cursor:pointer;
+    display: none;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+}
+.container2{
+    width:100%;
+    height:100px;
+    cursor:pointer;
+    display:block;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+}
+.no, .yes{
+    vertical-align: top;
+    display:inline-block;
+    width: calc(50% - 15px);
+    height:100%;
+    font-size: 5em;
+}
+.next{
+    vertical-align: top;
+    display:inline-block;
+    width: calc(100% - 15px);
+    height:100%;
+    font-size: 5em;
+}
+.no{
+    background-color: #EEB4B4;
+    border-radius:10px;
+    color:darkred;
+    
+}
+.yes, .next{
+    background-color: #5EDA9E;
+    border-radius:10px;
+    color:forestgreen;
+}
+.showmore{
+    color:#4424D6;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.x{
+    text-align:right;
+    margin:0px;
+    padding:0px;
+    cursor: pointer;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+}
+.modal{
+    z-index: 5;
+    background-color: rgba(0,0,0,0.8);
+    position:fixed;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    display: table;
+    visibility: hidden;
+}
+.showmore{
+    visibility:hidden;
+}
+.middle{
+    display: table-cell;
+    vertical-align: middle;
+}
+.modaltext{
+    width:50%;
+    margin-left:25%;
+    background-color:white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding:5px;
+}
+@media all and (max-height: 650px) {
+    .book, .books{
+        padding:10px 0px;
+        border: 10px solid #347B98;
+    }
+    .bookimg{
+        border-width: 10px;
+    }
+}
+@media screen and (max-width: 450px) {
+    .book, .books{
+        padding:8px 0px;
+        margin-top: 1px;
+        border: 5px solid #347B98;
+    }
+    p, body, .text{
+        font-size: 16px;
+        margin:0px;
+    }
+    .title{
+        font-size: 20px;
+        margin: 0px;
+    }
+    .storedBook .bookimg{
+        max-width:40%;
+    }
+    .storedBook{
+        max-width: calc(50% - 20px);
+        margin: 3px;
+    }
+    .bookimg{
+        border-width:5px;
+        padding:0px;
+        max-height: 45%;
+    }
+    .container,.container2{
+        height: 50px; 
+    }
+    .yes, .no, .next{
+        font-size: 2em;
+    }
+    .modaltext{
+        width:90%;
+        margin-left:2%;
+    }
+    .directions{
+        font-size: 10px;
+    }
+}

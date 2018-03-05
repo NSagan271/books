@@ -1,0 +1,40 @@
+.nav{
+    padding:0px;
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    background-color: #110934;
+}
+
+.nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 24px 16px;
+    text-decoration: none;
+}
+.nav li:not(.right) {
+    float: left;
+}
+.right{
+    float: right;
+}
+/* Change the link color to #111 (black) on hover */
+.active, .nav li a:hover {
+    background-color: #347B98;
+}
+.signout{
+    display:none;
+}
+.g-signin2{
+    margin:15px;
+}
+@media screen and (max-width: 450px) {
+    .nav li a {
+        padding: 20px 8px;
+        
+    }
+    .g-signin2{
+        margin:10px;
+    }
+}

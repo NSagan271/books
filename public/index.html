@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Books</title>
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+        
+        <link rel="stylesheet" href="stylesheet.css"/>
+        <link rel="stylesheet" href="nav.css"/>
+        <link rel="shortcut icon" type="image/png" href="icon.png"/>
+        <script src="https://code.jquery.com/jquery.min.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+        <meta name="google-signin-client_id" content="391608746435-3o8bek4ep6smguelu2c6bqqejh1rudoi.apps.googleusercontent.com">
+        
+        <script src="script.js"></script>
+    
+    </head>
+
+    <body onload = "start(0);">
+        <ul class="nav">
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="books.html">Saved Books</a></li>
+          <li class="right signin"><div class="g-signin2" data-onsuccess="onSignIn"></div></li>
+          <li class="right signout"><a href="#" onclick="signOut();" class="right">Sign out</a></li>
+        </ul>
+        
+        <div class = "book">
+            <div class="img">
+                <img src = "" class="bookimg" onclick="openModal(null)"/>
+                <figcaption class="directions">(Click picture for more info.)</figcaption>
+            </div>
+            
+            <div class="text">
+                <h1 class = "title"><em><span id="title">Title</span></em></h1>
+                <h3 class = "author">by <span id="author">Author</span></h3>
+            </div>
+            
+            
+            <p class="status">STATUS: <span id = "not"></span> AVAILABLE</p>
+            <div class = "container">
+                <div class="no" onclick="randomBook();">X</div>
+                <div class="yes" onclick="storeBook();">&check;</div>
+            </div>
+            <div class="container2">
+                <div class="next" onclick="randomBook()">NEXT</div>
+            </div>
+        </div>
+        <div class="modal"><div class="middle"><div class="modaltext"><p class="x" onclick="closemodal();">&times;</p><p id="summary"></p></div></div></div>
+    </body>
+    
+</html>
